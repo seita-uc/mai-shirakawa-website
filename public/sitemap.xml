@@ -12,17 +12,7 @@
   </url>
   
   <url>
-    <loc>https://maishirakawa.work/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://maishirakawa.work/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://maishirakawa.work/tags/</loc>
     <priority>0</priority>
   </url>
   

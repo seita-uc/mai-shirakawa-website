@@ -4,6 +4,7 @@ defaultContentLanguage = "ja"
 title = "Mai's Portfolio"
 assetDir = "./assets/"
 enableEmoji = true
+disableKinds = ["taxonomyTerm", "taxonomy"]
 
 [permalinks]
     post = "/:year/:month/:day/:slug"
