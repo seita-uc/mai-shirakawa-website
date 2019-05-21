@@ -2,16 +2,20 @@
 {{ $bulmaSass := resources.Get "bulma/bulma.sass" }}
 {{ $options := (dict "outputStyle" "nested" "includePaths" (slice "assets/bulma" "assets/bulma/sass" "targetPath" "css/bulma.css" )) }}
 {{ $bulma := $bulmaSass | resources.ToCSS $options }}
-
 {{ $allCss := slice $personalStyle }}
 {{ $css := $allCss | resources.Concat "css/main.css" }}
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <link href="{{ $bulma.Permalink }}" rel="stylesheet" type="text/css"/>
 <link href="{{ $css.Permalink }}" rel="stylesheet" type="text/css"/>
 
 {{ $custom := resources.Get "js/custom.js" }}
-
 {{ $js := slice $custom | resources.Concat "js/bundle.js" }}
 
+<!--jQuery-->
+<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.min.js"></script>
 <script src="{{ $js.Permalink }}"></script>
-

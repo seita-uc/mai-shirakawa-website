@@ -15,37 +15,31 @@
         {{ if eq $remainder 0.0 }}
         <div class="columns">
             <div class="column">
-                <a href="#demoLightbox" data-lightbox="balloon" data-title="{{ . | absURL }}">
+                <a data-fancybox="gallery" data-caption="" href="{{ . | absURL }}">
                     <figure class="image is-square">
-                        <img src="{{ . | absURL }}">
+                        <img src="{{ . | absURL }}" class="img-fluid">
                     </figure>
                 </a>
-                    <figure id="demoLightbox" class="lightbox hide fade">
-                        <img src="{{ . | absURL }}">
-                    </figure>
             </div>
-                {{ else }}
-                <div class="column">
-                    <a href="{{ . | absURL }}" data-lightbox="balloon" data-title="{{ . | absURL }}">
-                        <figure class="image is-square">
-                            <img src="{{ . | absURL }}">
-                        </figure>
-                    </a>
-                </div>
-                {{ if eq $remainder 2.0 }}
-            </div>
-            {{ end }}
-            {{ end }}
-            {{ $lastRemainder = $remainder }}
-            {{ end }}
-            {{ if (not (eq $lastRemainder 2.0)) }}
+            {{ else }}
             <div class="column">
-                <!--<figure class="image is-square">-->
-                <!--<img src="{{ . | absURL }}">-->
-                <!--</figure>-->
+                <a data-fancybox="gallery" data-caption="" href="{{ . | absURL }}">
+                    <figure class="image is-square">
+                        <img src="{{ . | absURL }}" class="img-fluid">
+                    </figure>
+                </a>
             </div>
+            {{ if eq $remainder 2.0 }}
         </div>
         {{ end }}
+        {{ end }}
+        {{ $lastRemainder = $remainder }}
+        {{ end }}
+        {{ if (not (eq $lastRemainder 2.0)) }}
+        <div class="column">
+        </div>
+    </div>
+    {{ end }}
     </div>
 </section>
 {{ end }}
