@@ -3,14 +3,6 @@ languageCode = "ja"
 defaultContentLanguage = "ja"
 title = "BA!LOON!"
 assetDir = "./assets/"
-# theme = "hugo-icarus-theme"
-# themesDir = "./themes/"
-# pygmentsUseClasses = true
-# pygmentsCodefences = true
-# pygmentsStyle = "monokai"
-# pygmentsOptions = "linenos=table"
-# pygmentsUseClassic = true
-# coverImage = "img/avatar.jpg"
 enableEmoji = true
 
 [permalinks]
@@ -18,17 +10,11 @@ enableEmoji = true
 
 [params]
     author = "Mai"
-    # bio = "Blogger - Engineer - Student"
     location = "Tokyo"
     site_description = "Mai Shirakawa's portfolio"
     description = "Mai Shirakawa's portfolio"
-    images = ["img/site-feature-image.jpeg"]
+    images = ["images/main.jpg"]
     copyright  = "Mai Shirakawa All Rights Reserved"
-    avatar = "img/icon.jpeg"
-    logo = "img/favicon.ico"
-
-    # define which types of pages should be shown. By default the type with the most regular pages
-    mainSections = ["post"]
-    # Format dates with Go's time formatting
+    logo = "images/favicon.ico"
     date_format = "2006-01-02"
 

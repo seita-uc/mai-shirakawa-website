@@ -11,7 +11,7 @@ void setup(){
     background(255);
 
     /*frameRate(12);*/
-    gifExport = new GifMaker(this, "export.gif");
+    gifExport = new GifMaker(this, "images/export.gif");
     gifExport.setRepeat(0);				// make it an "endless" animation
     /*gifExport.setTransparent(0, 0, 0);	// black is transparent*/
 
