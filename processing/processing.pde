@@ -1,5 +1,39 @@
+PImage img;
+PImage[] circularSmallImgs = new PImage[8];
+PImage[] circularBigImgs = new PImage[8];
+int randIndex1;
+int randIndex2;
+void setup(){
+  size(displayWidth, 500);
+  background(255);
+  String imgPath = "images/main.jpg";
+  img = loadImage(imgPath);
+  img.resize(width, 0);
+  for(int i = 0; i < 8; i++) {
+      String circularImgPath = "images/circular_img_" + (i+1) + ".jpg";
+      circularSmallImgs[i] = loadImage(circularImgPath);
+      circularSmallImgs[i].resize(255, 255);
+      circularBigImgs[i] = loadImage(circularImgPath);
+      circularBigImgs[i].resize(315, 315);
+  }
+} 
+
+void draw(){
+  image(img, 0, 0);
+  image(circularSmallImgs[randIndex1], 410, 203);
+  image(circularBigImgs[randIndex2], 679, 145);
+  if (random(100) > 97) {
+      randIndex1 = int(random(circularSmallImgs.length-1));
+      randIndex2 = int(random(circularBigImgs.length-1));
+  }
+}
+
+/*void keyPressed(){*/
+    /*if(key != ' ') {*/
+    /*}*/
+/*} */
+
 class Person {
-    public PImage img;
     public float px;
     public float py;
     public float pxspeed;
@@ -8,7 +42,6 @@ class Person {
     public float psize;
 
     public Person(String imgPath, float x, float y, float xspeed, float yspeed) {
-        img = loadImage(imgPath);
         px = x;
         py = y;
         pxspeed = xspeed;
@@ -21,7 +54,7 @@ class Person {
         if(isOn) {
             image(img, px, py, psize, psize);
         }
-        
+
         px = px + pxspeed;
         py = py + pyspeed;
 
@@ -42,33 +75,3 @@ class Person {
         psize = size;
     }
 }
-
-Person[] people = new Person[10];
-void setup(){
-  size(800, 800);
-  background(255);
-  for(int i = 0; i < 10; i++) {
-      String imgPath = String.format("images/people_%d.png", i+1);
-      float x = random(0, 800);
-      float y = random(0, 800);
-      float xspeed = random(-15, 15);
-      float yspeed = random(-15, 15);
-      people[i] = new Person(imgPath, x, y, xspeed, yspeed);
-  }
-} 
-
-void draw(){
-  imageMode(CENTER);
-  for(int i = 0; i < people.length; i++) {
-      people[i].walk();
-  }
-}
-
-void keyPressed(){
-    if(key != ' ') {
-        for(int i = 0; i < people.length; i++) {
-            people[i].changeSize(random(100, 300));
-        }
-    }
-    if(key == ' ') saveFrame("images/people-######.png");
-} 

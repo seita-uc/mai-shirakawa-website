@@ -2,6 +2,7 @@ baseURL = "https://maishirakawa.work/"
 languageCode = "ja"
 defaultContentLanguage = "ja"
 title = "BA!LOON!"
+assetDir = "./assets/"
 # theme = "hugo-icarus-theme"
 # themesDir = "./themes/"
 # pygmentsUseClasses = true
@@ -28,10 +29,6 @@ enableEmoji = true
 
     # define which types of pages should be shown. By default the type with the most regular pages
     mainSections = ["post"]
-
     # Format dates with Go's time formatting
     date_format = "2006-01-02"
 
-    # Add custom assets with their paths relative to the static folder
-	  custom_css = ["css/custom.css", "css/portfolio.css"]
-	  custom_js  = []

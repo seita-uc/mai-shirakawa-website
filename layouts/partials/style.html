@@ -10,8 +10,9 @@
 <link href="{{ $css.Permalink }}" rel="stylesheet" type="text/css"/>
 
 {{ $custom := resources.Get "js/custom.js" }}
+{{ $processing := resources.Get "js/processing.js" }}
 
-{{ $js := slice $custom | resources.Concat "js/bundle.js" }}
+{{ $js := slice $custom $processing | resources.Concat "js/bundle.js" }}
 
 <script src="{{ $js.Permalink }}"></script>
 
