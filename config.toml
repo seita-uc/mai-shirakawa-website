@@ -1,0 +1,37 @@
+baseURL = "https://maishirakawa.work/"
+languageCode = "ja"
+defaultContentLanguage = "ja"
+title = "BA!LOON!"
+# theme = "hugo-icarus-theme"
+# themesDir = "./themes/"
+# pygmentsUseClasses = true
+# pygmentsCodefences = true
+# pygmentsStyle = "monokai"
+# pygmentsOptions = "linenos=table"
+# pygmentsUseClassic = true
+# coverImage = "img/avatar.jpg"
+enableEmoji = true
+
+[permalinks]
+    post = "/:year/:month/:day/:slug"
+
+[params]
+    author = "Mai"
+    # bio = "Blogger - Engineer - Student"
+    location = "Tokyo"
+    site_description = "Mai Shirakawa's portfolio"
+    description = "Mai Shirakawa's portfolio"
+    images = ["img/site-feature-image.jpeg"]
+    copyright  = "Mai Shirakawa All Rights Reserved"
+    avatar = "img/icon.jpeg"
+    logo = "img/favicon.ico"
+
+    # define which types of pages should be shown. By default the type with the most regular pages
+    mainSections = ["post"]
+
+    # Format dates with Go's time formatting
+    date_format = "2006-01-02"
+
+    # Add custom assets with their paths relative to the static folder
+	  custom_css = ["css/custom.css", "css/portfolio.css"]
+	  custom_js  = []

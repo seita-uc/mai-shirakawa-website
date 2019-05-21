@@ -1,0 +1,16 @@
+{{ partial "head" . }}
+
+<div id="container">
+	{{ partialCached "header" . }}
+
+   	<div class="outer">
+
+    <section id="main">
+    {{ block "main" . }}{{ end }}
+    </section>
+	</div>
+</div>
+
+{{ partialCached "footer" . }}
+</body>
+</html>
