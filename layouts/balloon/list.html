@@ -1,25 +1,52 @@
 {{ define "main" }}
 <section class="hero">
     <div class="container">
-        <img src="{{ "images/main.gif" | absURL }}" alt="BALLOON">
+        <img src="{{ .Params.MainImage | absURL }}" alt="BALLOON">
     </div>
 </section>
 <section class="section">
     <div class="container">
+        {{ $colNum := 3.0 }}
+        {{ $lastRemainder := 0.0 }}
+        {{ range $index, $elem := .Params.Images }}
+        {{ $divided := math.Floor (div $index $colNum) }}
+        {{ $multiplied := mul $divided $colNum }}
+        {{ $remainder := math.Round (sub $index $multiplied) }}
+        {{ if eq $remainder 0.0 }}
         <div class="columns">
             <div class="column">
-                First column
+                <a href="#demoLightbox" data-lightbox="balloon" data-title="{{ . | absURL }}">
+                    <figure class="image is-square">
+                        <img src="{{ . | absURL }}">
+                    </figure>
+                </a>
+                    <figure id="demoLightbox" class="lightbox hide fade">
+                        <img src="{{ . | absURL }}">
+                    </figure>
             </div>
-            <div class="column">
-                Second column
+                {{ else }}
+                <div class="column">
+                    <a href="{{ . | absURL }}" data-lightbox="balloon" data-title="{{ . | absURL }}">
+                        <figure class="image is-square">
+                            <img src="{{ . | absURL }}">
+                        </figure>
+                    </a>
+                </div>
+                {{ if eq $remainder 2.0 }}
             </div>
+            {{ end }}
+            {{ end }}
+            {{ $lastRemainder = $remainder }}
+            {{ end }}
+            {{ if (not (eq $lastRemainder 2.0)) }}
             <div class="column">
-                Third column
-            </div>
-            <div class="column">
-                Fourth column
+                <!--<figure class="image is-square">-->
+                <!--<img src="{{ . | absURL }}">-->
+                <!--</figure>-->
             </div>
         </div>
+        {{ end }}
     </div>
 </section>
 {{ end }}
+

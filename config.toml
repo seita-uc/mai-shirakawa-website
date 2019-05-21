@@ -1,7 +1,7 @@
 baseURL = "https://maishirakawa.work/"
 languageCode = "ja"
 defaultContentLanguage = "ja"
-title = "BA!LOON!"
+title = "Mai's Portfolio"
 assetDir = "./assets/"
 enableEmoji = true
 

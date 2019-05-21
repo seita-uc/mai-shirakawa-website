@@ -3,21 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://maishirakawa.work/balloon/</loc>
+  </url>
+  
+  <url>
     <loc>https://maishirakawa.work/receipt/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://maishirakawa.work/balloon/</loc>
-  </url>
-  
-  <url>
-    <loc>https://maishirakawa.work/</loc>
+    <loc>https://maishirakawa.work/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://maishirakawa.work/categories/</loc>
+    <loc>https://maishirakawa.work/</loc>
     <priority>0</priority>
   </url>
   
