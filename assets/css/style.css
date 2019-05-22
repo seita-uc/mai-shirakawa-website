@@ -1,9 +1,35 @@
 .modal {
      z-index: 2000; 
 }
-.main-wrapper {
-    margin: 1rem 10rem;
+.slick-prev:before, .slick-next:before {
+    font-size: 40px;
+    color: #dfe3e6;
+    opacity: 0.75;
+    z-index: 5;
 }
-.main-wrapper figure {
-    margin: 1rem 0 5rem 0;
+@media (min-width: 769px) {
+    .main-wrapper {
+        margin: 1rem 10rem;
+    }
+    .main-wrapper figure {
+        margin: 1rem 0 5rem 0;
+    }
+    .slick-prev {
+        left: 0px;
+        z-index: 3;
+    }
+    .slick-next {
+        right: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .main-wrapper {
+        margin: 1rem 0 0 0;
+    }
+    .main-wrapper figure {
+        margin: 1rem 0 4rem 0;
+    }
+    .slick-prev, .slick-next {
+        display: none;
+    }
 }

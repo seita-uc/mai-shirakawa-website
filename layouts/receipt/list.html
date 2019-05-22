@@ -4,9 +4,9 @@
         <div class="container">
             <div class="main-wrapper">
                 <figure class="image">
-                    <img src="{{ .Params.MainImage | absURL }}" alt="BALLOON">
+                    <img src="{{ .Params.MainImage | absURL }}" alt="RECEIPT">
                 </figure>
-                <h1 class="is-size-4">
+                <h1 class="is-size-4-desktop is-size-5-mobile">
                     自分自身の言葉を用いずとも、日常をそのまま記録する媒体として、紙一重の価値をもつレシートを用いたワークショップ。
                     2017年7月に開催。来場者のお財布からランダムに出したレシートで対話を通して、記憶を辿りストーリーを紡ぎだすワークショップとなった。
                 </h1>
@@ -14,6 +14,17 @@
         </div>
     </div>
 </section>
+
+<section class="section">
+    <div class="container process-images">
+        {{ range $index, $elem := .Params.ProcessImages }}
+        <figure class="image">
+            <img src="{{ $elem | absURL }}" alt="RECEIPT">
+        </figure>
+        {{ end }}
+    </div>
+</section>
+
 <section class="section">
     <div class="container">
         {{ $colNum := 3.0 }}
