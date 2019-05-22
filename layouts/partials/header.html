@@ -1,9 +1,8 @@
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar has-shadow is-spaced" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="{{ "/" | absURL }}">
+        <!--<a class="navbar-item" href="{{ "/" | absURL }}">-->
             <!--<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">-->
-        </a>
-
+        <!--</a>-->
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -13,19 +12,30 @@
 
     <div id="navbar" class="navbar-menu">
         <div class="navbar-start">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-success" href="{{ "/" | absURL }}">
-                        <strong>PIECES OF ME</strong>
-                    </a>
-                    <a class="button is-light" href="{{ "/receipt" | absURL }}">
-                        <strong>レシート！</strong>
-                    </a>
-                    <a class="button is-primary" href="{{ "/balloon" | absURL }}">
-                        <strong>BA!LOON!</strong>
-                    </a>
-                </div>
-            </div>
+            <a class="navbar-item" href="{{ "/" | absURL }}">
+                <span class="icon has-text-primary is-medium">
+                    <i class="fas fa-pizza-slice"></i>
+                </span>
+                <span class="is-medium">
+                    <strong>PIECES OF ME</strong>
+                </span>
+            </a>
+            <a class="navbar-item" href="{{ "/receipt" | absURL }}">
+                <span class="icon has-text-primary is-medium">
+                    <i class="fas fa-scroll"></i>
+                </span>
+                <span>
+                    <strong>レシート！</strong>
+                </span>
+            </a>
+            <a class="navbar-item" href="{{ "/balloon" | absURL }}">
+                <span class="icon has-text-info is-medium">
+                    <i class="fas fa-bullseye"></i>
+                </span>
+                <span>
+                    <strong>BA!LOON!</strong>
+                </span>
+            </a>
         </div>
     </div>
 </nav>

@@ -1,3 +1,9 @@
 .modal {
      z-index: 2000; 
 }
+.main-wrapper {
+    margin: 1rem 10rem;
+}
+.main-wrapper figure {
+    margin: 1rem 0 5rem 0;
+}

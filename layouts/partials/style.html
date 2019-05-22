@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 <link href="{{ $bulma.Permalink }}" rel="stylesheet" type="text/css"/>
 <link href="{{ $css.Permalink }}" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
 {{ $custom := resources.Get "js/custom.js" }}
 {{ $js := slice $custom | resources.Concat "js/bundle.js" }}

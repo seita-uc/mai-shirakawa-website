@@ -1,6 +1,6 @@
 {{ partial "head" . }}
+{{ partialCached "header" . }}
 <body>
-    {{ partialCached "header" . }}
     {{ block "main" . }}{{ end }}
     {{ partialCached "footer" . }}
 </body>
