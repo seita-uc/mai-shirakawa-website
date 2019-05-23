@@ -1,3 +1,6 @@
+html, body {
+    font-family: "Hiragino Maru Gothic ProN","メイリオ", sans-serif !important;
+}
 .modal {
      z-index: 2000; 
 }
